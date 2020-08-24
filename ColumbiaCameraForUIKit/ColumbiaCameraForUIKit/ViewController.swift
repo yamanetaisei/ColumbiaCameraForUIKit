@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
 
     @IBOutlet weak var textField: UITextField!
     
@@ -19,6 +19,13 @@ class ViewController: UIViewController {
 
 
     @IBAction func startCamera(_ sender: Any) {
+        let picker = UIImagePickerController()
+        let sourceType: UIImagePickerController.SourceType = UIImagePickerController.SourceType.camera
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+            picker.sourceType = sourceType
+            picker.delegate = self
+            self.present(picker, animated: true, completion: nil)
+        }
     }
 }
 
