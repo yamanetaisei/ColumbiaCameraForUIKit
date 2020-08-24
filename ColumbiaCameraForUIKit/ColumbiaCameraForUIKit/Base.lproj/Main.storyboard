@@ -52,10 +52,10 @@
             </objects>
             <point key="canvasLocation" x="138.40000000000001" y="138.91625615763547"/>
         </scene>
-        <!--View Controller-->
+        <!--Second View Controller-->
         <scene sceneID="RAg-lf-sd6">
             <objects>
-                <viewController id="Zgz-3c-ELD" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zgz-3c-ELD" customClass="SecondViewController" customModule="ColumbiaCameraForUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VA-pF-J7m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -73,6 +73,9 @@
                                     <constraint firstAttribute="width" constant="78" id="Q40-Ns-Old"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="square.and.arrow.down" catalog="system"/>
+                                <connections>
+                                    <action selector="saveButton:" destination="Zgz-3c-ELD" eventType="touchUpInside" id="Pbj-YD-qkg"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8xi-8N-9sc">
                                 <rect key="frame" x="44" y="616.33333333333337" width="78" height="79"/>
@@ -81,6 +84,9 @@
                                     <constraint firstAttribute="height" constant="78.666666666666742" id="KmX-UZ-zer"/>
                                 </constraints>
                                 <state key="normal" backgroundImage="trash" catalog="system"/>
+                                <connections>
+                                    <action selector="trushButton:" destination="Zgz-3c-ELD" eventType="touchUpInside" id="FrQ-Kl-VsL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
@@ -95,6 +101,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QFE-jh-fbq"/>
                     </view>
+                    <connections>
+                        <outlet property="completePhotoView" destination="k6L-5m-d8q" id="OFd-Zu-KLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzD-Vr-SXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
