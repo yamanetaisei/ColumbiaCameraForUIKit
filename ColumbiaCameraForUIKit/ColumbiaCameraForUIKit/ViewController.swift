@@ -8,13 +8,18 @@
 
 import UIKit
 
-class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
+    
+    var answerText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        textField.placeholder = "クイズの答えを入力してください"
+        textField.clearButtonMode = .always
+        textField.delegate = self
     }
 
 
@@ -27,5 +32,15 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
             self.present(picker, animated: true, completion: nil)
         }
     }
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+    }
+    
+    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+        textField.resignFirstResponder()
+    }
+    
+    
 }
 
