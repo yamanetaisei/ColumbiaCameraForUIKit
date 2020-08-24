@@ -11,18 +11,19 @@ import UIKit
 class MakeImage {
     
     func makeTelop(text: String) -> UIImage {
+        print(text)
         let telop = UIImage(named: "Telop")
         print(text)
         let textLabel = UILabel()
         textLabel.text = text
         textLabel.font = UIFont(name: "HiraKakuProN-W6", size: 30)
-        textLabel.layer.shadowColor = UIColor.black.cgColor
+        
         textLabel.frame = CGRect(x:0, y: 0, width: telop!.size.width * 1.1, height: telop!.size.height)
         textLabel.textAlignment = NSTextAlignment.center
         
         UIGraphicsBeginImageContext(CGSize(width: telop!.size.width, height: telop!.size.height))
         telop?.draw(in: CGRect(x: 0, y: 0, width: telop!.size.width, height: telop!.size.height))
-        textLabel.drawText(in: textLabel.frame)
+        textLabel.draw(textLabel.frame)
         let newTelop = UIGraphicsGetImageFromCurrentImageContext()
         
         UIGraphicsEndImageContext()

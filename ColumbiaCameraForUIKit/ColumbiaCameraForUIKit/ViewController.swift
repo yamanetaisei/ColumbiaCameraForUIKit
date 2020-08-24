@@ -46,6 +46,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         nextVC.modalPresentationStyle = .fullScreen
         let image = info[.originalImage]
         nextVC.usePhoto = image as? UIImage
+        nextVC.answerText = textField.text ?? ""
         picker.dismiss(animated: true, completion: nil)
         self.present(nextVC, animated: true, completion: nil)
     }
