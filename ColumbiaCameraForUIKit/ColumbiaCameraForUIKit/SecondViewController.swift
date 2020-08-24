@@ -24,9 +24,13 @@ class SecondViewController: UIViewController {
 
 
     @IBAction func trushButton(_ sender: Any) {
+        self.dismiss(animated: true, completion: nil)
     }
     
     
     @IBAction func saveButton(_ sender: Any) {
+        let addImage = completePhotoView.image
+        UIImageWriteToSavedPhotosAlbum(addImage!, nil, nil, nil)
+        self.dismiss(animated: true, completion: nil)
     }
 }
