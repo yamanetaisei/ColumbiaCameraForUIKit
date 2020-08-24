@@ -1,17 +1,15 @@
 {
   "images" : [
     {
-      "filename" : "Telop2.png",
+      "filename" : "テロップ.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Telop2@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Telop2@3x.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
