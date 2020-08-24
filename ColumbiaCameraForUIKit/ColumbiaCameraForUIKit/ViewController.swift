@@ -12,7 +12,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
 
     @IBOutlet weak var textField: UITextField!
     
-    var answerText: String = ""
+    var inputText: String = ""
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -45,9 +45,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         let nextVC = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
         nextVC.modalPresentationStyle = .fullScreen
         let image = info[.originalImage]
+        nextVC.usePhoto = image as? UIImage
         picker.dismiss(animated: true, completion: nil)
         self.present(nextVC, animated: true, completion: nil)
-        
     }
 }
 

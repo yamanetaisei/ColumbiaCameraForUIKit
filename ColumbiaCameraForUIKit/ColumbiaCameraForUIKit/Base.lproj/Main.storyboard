@@ -55,7 +55,7 @@
         <!--Second View Controller-->
         <scene sceneID="RAg-lf-sd6">
             <objects>
-                <viewController id="Zgz-3c-ELD" customClass="SecondViewController" customModule="ColumbiaCameraForUIKit" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SecondViewController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="Zgz-3c-ELD" customClass="SecondViewController" customModule="ColumbiaCameraForUIKit" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8VA-pF-J7m">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -101,6 +101,9 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="QFE-jh-fbq"/>
                     </view>
+                    <connections>
+                        <outlet property="completePhotoView" destination="k6L-5m-d8q" id="OFd-Zu-KLl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wzD-Vr-SXe" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

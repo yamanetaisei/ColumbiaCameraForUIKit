@@ -9,10 +9,16 @@
 import UIKit
 
 class SecondViewController: UIViewController {
+    
+    var usePhoto:UIImage?
+    var answerText: String = ""
 
+    @IBOutlet weak var completePhotoView: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        completePhotoView.image = usePhoto
         
     }
 
