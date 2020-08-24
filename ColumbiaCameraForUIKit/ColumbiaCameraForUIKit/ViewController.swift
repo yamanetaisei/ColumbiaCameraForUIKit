@@ -42,11 +42,11 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
-//        let nextVC = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
-//        nextVC.modalPresentationStyle = .fullScreen
-//        let image = info[.originalImage]
-//        picker.dismiss(animated: true, completion: nil)
-//        self.present(nextVC, animated: true, completion: nil)
+        let nextVC = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
+        nextVC.modalPresentationStyle = .fullScreen
+        let image = info[.originalImage]
+        picker.dismiss(animated: true, completion: nil)
+        self.present(nextVC, animated: true, completion: nil)
         
     }
 }

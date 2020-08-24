@@ -17,4 +17,10 @@ class SecondViewController: UIViewController {
     }
 
 
+    @IBAction func trushButton(_ sender: Any) {
+    }
+    
+    
+    @IBAction func saveButton(_ sender: Any) {
+    }
 }
