@@ -1,1 +1,1 @@
-# ColumbiaCameraforUIKit
+# ColumbiaCameraForUIKit
