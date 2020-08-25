@@ -12,8 +12,6 @@ class SecondViewController: UIViewController {
     
     var completePhoto:UIImage?
     
-    let makeImage = MakeImage()
-
     @IBOutlet weak var completePhotoView: UIImageView!
     
     override func viewDidLoad() {
