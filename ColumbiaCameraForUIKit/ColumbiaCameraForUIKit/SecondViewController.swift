@@ -10,8 +10,7 @@ import UIKit
 
 class SecondViewController: UIViewController {
     
-    var usePhoto:UIImage?
-    var answerText: String = ""
+    var completePhoto:UIImage?
     
     let makeImage = MakeImage()
 
@@ -20,7 +19,7 @@ class SecondViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        completePhotoView.image = makeImage.toComplete(image: usePhoto!, text: answerText)
+        completePhotoView.image = completePhoto
         
     }
 
