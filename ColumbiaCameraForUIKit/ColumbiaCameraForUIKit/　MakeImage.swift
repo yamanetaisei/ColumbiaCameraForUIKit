@@ -18,7 +18,7 @@ class MakeImage {
         textLabel.font = UIFont(name: "HiraKakuProN-W6", size: 30)
         textLabel.frame = CGRect(x:0, y: 0, width: telop!.size.width * 1.1, height: telop!.size.height)
         textLabel.textAlignment = NSTextAlignment.center
-        
+        textLabel.makeOutLine(strokeWidth: -5.0, oulineColor: .black, foregroundColor: .white)
         UIGraphicsBeginImageContext(CGSize(width: telop!.size.width, height: telop!.size.height))
         telop?.draw(in: CGRect(x: 0, y: 0, width: telop!.size.width, height: telop!.size.height))
         textLabel.draw(textLabel.frame)
