@@ -19,11 +19,12 @@ class MakeImage {
         textLabel.frame = CGRect(x:0, y: 0, width: telop!.size.width * 1.1, height: telop!.size.height)
         textLabel.textAlignment = NSTextAlignment.center
         textLabel.makeOutLine(strokeWidth: -5.0, oulineColor: .black, foregroundColor: .white)
+        //コンテキストの編集を開始
         UIGraphicsBeginImageContext(CGSize(width: telop!.size.width, height: telop!.size.height))
         telop?.draw(in: CGRect(x: 0, y: 0, width: telop!.size.width, height: telop!.size.height))
         textLabel.draw(textLabel.frame)
         let newTelop = UIGraphicsGetImageFromCurrentImageContext()
-        
+        //コンテキストの編集を終える
         UIGraphicsEndImageContext()
         
         return newTelop!
@@ -34,7 +35,7 @@ class MakeImage {
         let telopAspectScale = telop.size.height / telop.size.width
         
         let telopResizedSize = CGSize(width: image.size.width, height: image.size.width * CGFloat(Double(telopAspectScale)))
-        
+        //コンテキストの編集を開始
         UIGraphicsBeginImageContext(CGSize(width: image.size.width, height: image.size.height))
         
         image.draw(in: CGRect(x: 0, y: 0, width: image.size.width , height: image.size.height))
@@ -45,8 +46,9 @@ class MakeImage {
             telop.draw(in: CGRect(x: 0, y: image.size.height/1.2, width: image.size.width, height: telopResizedSize.height))
         }
     
-
+        //コンテキストからImageを生成する
         let newImage = UIGraphicsGetImageFromCurrentImageContext()
+        //コンテキストの編集を終える
         UIGraphicsEndImageContext()
 
         return newImage!

@@ -11,9 +11,9 @@ import UIKit
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
 
     @IBOutlet weak var textField: UITextField!
-    
+    //MakeImageクラスのインスタンスを生成
     let makeImage = MakeImage()
-    
+    //入力したテキストをここで管理
     var inputText: String = ""
     
     override func viewDidLoad() {
@@ -21,34 +21,43 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         textField.placeholder = "クイズの答えを入力してください"
         textField.clearButtonMode = .always
+        //デリゲードを設定
         textField.delegate = self
     }
 
 
     @IBAction func startCamera(_ sender: Any) {
+        //インスタンスを生成
         let picker = UIImagePickerController()
+        //ソースタイプの指定
         let sourceType: UIImagePickerController.SourceType = UIImagePickerController.SourceType.camera
-        if UIImagePickerController.isSourceTypeAvailable(sourceType) {
+        //動作環境でソースタイプで指定したもの（この場合はカメラ）が使用できるか
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) {//Yes
             picker.sourceType = sourceType
             picker.delegate = self
             self.present(picker, animated: true, completion: nil)
-        }
+        }//No
     }
-    
+    //Retuenキーが押下されたときの動作
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        //キーボードを閉じる
         textField.resignFirstResponder()
     }
-    
+    //画面タッチ時の動作
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         textField.resignFirstResponder()
     }
-    
+    //写真撮影後の動作
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
+        //次の画面
         let nextVC = storyboard?.instantiateViewController(identifier: "SecondViewController") as! SecondViewController
         nextVC.modalPresentationStyle = .fullScreen
+        //撮影した画像を変数に代入
         let image = info[.originalImage]
         nextVC.completePhoto = makeImage.toComplete(image: image as! UIImage, text: textField.text ?? "")
+        //カメラの画面を終了
         picker.dismiss(animated: true, completion: nil)
+        //画面遷移
         self.present(nextVC, animated: true, completion: nil)
     }
 }
