@@ -16,5 +16,5 @@ L( ･´ー･`)」　[答：コロンビア]
 ## 制作背景
 プロフィール画像設定や自己紹介の時にウケがとれる写真が欲しかったのです。
 
-<img src="https://user-images.githubusercontent.com/50735539/103475318-922edf80-4def-11eb-9191-5cae4b6bc022.png" width="0px">
+<img src="https://user-images.githubusercontent.com/50735539/103475318-922edf80-4def-11eb-9191-5cae4b6bc022.png" width="200px">
 
