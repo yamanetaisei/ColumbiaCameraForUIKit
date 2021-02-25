@@ -10,7 +10,14 @@ import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
     
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.placeholder = "クイズの答えを入力してください(10文字以内)"
+            textField.clearButtonMode = .always
+            //デリゲードを設定
+            textField.delegate = self
+        }
+    }
     //MakeImageクラスのインスタンスを生成
     let makeImage = MakeImage()
     //入力したテキストをここで管理
@@ -18,11 +25,6 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.placeholder = "クイズの答えを入力してください"
-        textField.clearButtonMode = .always
-        //デリゲードを設定
-        textField.delegate = self
     }
     
     
