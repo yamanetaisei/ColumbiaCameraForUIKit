@@ -14,6 +14,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         didSet {
             textField.placeholder = "クイズの答えを入力してください(10文字以内)"
             textField.clearButtonMode = .always
+            textField.backgroundColor = UIColor(hex: "#fff1c1")
             //デリゲードを設定
             textField.delegate = self
         }
@@ -25,6 +26,7 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = UIColor(hex:"#fff1ac")
     }
     
     
