@@ -9,8 +9,16 @@
 import UIKit
 
 class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate, UITextFieldDelegate {
-
-    @IBOutlet weak var textField: UITextField!
+    
+    @IBOutlet weak var textField: UITextField! {
+        didSet {
+            textField.placeholder = "クイズの答えを入力してください(10文字以内)"
+            textField.clearButtonMode = .always
+            textField.backgroundColor = UIColor(hex: "#fff1c1")
+            //デリゲードを設定
+            textField.delegate = self
+        }
+    }
     //MakeImageクラスのインスタンスを生成
     let makeImage = MakeImage()
     //入力したテキストをここで管理
@@ -18,14 +26,10 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        textField.placeholder = "クイズの答えを入力してください"
-        textField.clearButtonMode = .always
-        //デリゲードを設定
-        textField.delegate = self
+        view.backgroundColor = UIColor(hex:"#fff1ac")
     }
-
-
+    
+    
     @IBAction func startCamera(_ sender: Any) {
         //インスタンスを生成
         let picker = UIImagePickerController()
@@ -42,6 +46,16 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
         //キーボードを閉じる
         textField.resignFirstResponder()
+    }
+    
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+        let maxLength: Int = 10
+        let str = textField.text! + string
+        
+        if str.count <= maxLength {
+            return true
+        }
+        return false
     }
     //画面タッチ時の動作
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {

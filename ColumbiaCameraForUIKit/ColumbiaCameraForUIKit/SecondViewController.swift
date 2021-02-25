@@ -16,9 +16,8 @@ class SecondViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        view.backgroundColor = UIColor(hex:"#fff1ac")
         completePhotoView.image = completePhoto
-        
     }
 
 
