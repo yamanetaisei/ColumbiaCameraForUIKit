@@ -18,3 +18,6 @@
 
 <img src="https://user-images.githubusercontent.com/50735539/103475318-922edf80-4def-11eb-9191-5cae4b6bc022.png" width="200px">
 
+# 2021/2/26　AppStoreにリリースしました
+
+ダウンロードは[こちら]から(https://apps.apple.com/jp/app/%E3%82%B3%E3%83%AD%E3%83%B3%E3%83%93%E3%82%A2%E3%82%AB%E3%83%A1%E3%83%A9/id1555423131)
