@@ -16,7 +16,7 @@ DerivedData
 *.ipa
 *.xcuserstate
 # CocoaPod
-ColumbiaCameraForUIKit/Pods/*
+Pods/*
 # others
 *.swp
 !.gitkeep
