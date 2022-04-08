@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageWithTelop" customModule="ColumbiaCameraForUIKit" customModuleProvider="target">
+            <connections>
+                <outlet property="originalImageView" destination="j4M-rK-iIZ" id="g3x-19-A0D"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="440" height="361"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="j4M-rK-iIZ">
+                    <rect key="frame" x="0.0" y="0.0" width="440" height="361"/>
+                </imageView>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Telop" translatesAutoresizingMaskIntoConstraints="NO" id="rNA-2z-oDb">
+                    <rect key="frame" x="16" y="271" width="408" height="75"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="75" id="pd5-P9-x3j"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="rNA-2z-oDb" secondAttribute="bottom" constant="15" id="4Ht-RA-tVg"/>
+                <constraint firstAttribute="bottom" secondItem="j4M-rK-iIZ" secondAttribute="bottom" id="Bfb-fR-Mj7"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="rNA-2z-oDb" secondAttribute="trailing" constant="16" id="EJl-QX-IMQ"/>
+                <constraint firstItem="j4M-rK-iIZ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="Opa-YY-F4B"/>
+                <constraint firstItem="rNA-2z-oDb" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="VLX-fe-TaJ"/>
+                <constraint firstItem="j4M-rK-iIZ" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="agk-Ec-mg1"/>
+                <constraint firstItem="j4M-rK-iIZ" firstAttribute="trailing" secondItem="vUN-kp-3ea" secondAttribute="trailing" id="eRb-6U-Cw7"/>
+                <constraint firstItem="rNA-2z-oDb" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="16" id="uY9-bb-Php"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="71.014492753623188" y="-118.19196428571428"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="Telop" width="421" height="68"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

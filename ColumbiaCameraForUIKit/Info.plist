@@ -24,6 +24,8 @@
 	<true/>
 	<key>NSCameraUsageDescription</key>
 	<string>加工するための写真を撮影します</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string></string>
 	<key>NSPhotoLibraryAddUsageDescription</key>
 	<string>加工した写真を保存します</string>
 	<key>UIApplicationSceneManifest</key>
